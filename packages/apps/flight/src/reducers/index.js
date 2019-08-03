@@ -1,13 +1,10 @@
 import { combineReducers } from 'redux';
 import { reducer as reduxFormReducer } from 'redux-form';
-import peopleReducer from './reducer.people';
-import planetsReducer from './reducer.planets';
+import flightReducer from './reducer.flight';
 
 const rootReducer = combineReducers({
-  authentication: false,
   form: reduxFormReducer,
-  people: peopleReducer,
-  planets: planetsReducer
+  flight: flightReducer
 });
 
 export default rootReducer;

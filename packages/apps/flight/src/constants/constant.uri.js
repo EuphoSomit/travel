@@ -5,11 +5,9 @@ export const urlConstants = {
 };
 
 export const API_INTERFACE = {
-  GET_PEOPLE: '/people',
-  GET_PLANETS: '/planets'
+  GET_FLIGHT: '/flight'
 };
 
 export const uriConstants = {
-  GET_PEOPLE_API: urlConstants.BASE_URL + API_INTERFACE.GET_PEOPLE,
-  GET_PLANETS_API: urlConstants.BASE_URL + API_INTERFACE.GET_PLANETS
+  GET_FLIGHT_API: urlConstants.BASE_URL + API_INTERFACE.GET_FLIGHT
 };

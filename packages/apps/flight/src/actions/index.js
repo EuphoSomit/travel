@@ -1,2 +1,1 @@
-export * from './action.peopleDetail';
-export * from './action.planets';
+export * from './action.flight';

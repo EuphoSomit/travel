@@ -1,27 +1,12 @@
-import React, {Component} from 'react';
-import ReactLogo from './ReactLogo.svg';
-import YarnCat from './YarnCat.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-import {CompOne, CompTwo} from '@travel/components';
+import { CompOne, CompTwo } from '@travel/components';
 
 class App extends Component {
 	render() {
 		return (
 			<div className="App">
 				<header className="App-header">
-					<div>
-						<img
-							src={ReactLogo}
-							className="React-logo"
-							alt="React Logo"
-						/>
-						<img
-							src={YarnCat}
-							className="Yarn-cat"
-							alt="Yarn Workspaces Cat"
-						/>
-					</div>
 					<h1>
 						<a
 							className="App-link"
