@@ -15,8 +15,11 @@
     "cross-env": "5.0.5",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
+    "moment": "^2.24.0",
     "prop-types": "^15.6.2",
+    "rc-calendar": "^9.15.5",
     "react": "^16.8.6",
+    "react-autocomplete": "^1.8.1",
     "react-dom": "^16.8.6"
   },
   "eslintConfig": {

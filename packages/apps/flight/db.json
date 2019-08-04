@@ -1,0 +1,24 @@
+{
+    "airport": [
+        {
+            "city": "Pune",
+            "country": "India, Maharashtra",
+            "code": "PNQ"
+        },
+        {
+            "city": "Delhi - Indira Gandhi International Airport",
+            "country": "India",
+            "code": "DEL"
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    }
+}

@@ -1,6 +1,6 @@
 import { all } from 'redux-saga/effects';
-import { flightWatcherSaga } from './saga.flight';
+import { searchAirportWatcherSaga } from './saga.search';
 
 export default function* root() {
-  yield all([flightWatcherSaga()]);
+  yield all([searchAirportWatcherSaga()]);
 }

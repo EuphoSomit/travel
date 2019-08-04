@@ -1,2 +1,3 @@
-export {default as CompOne} from './src/CompOne';
-export {default as CompTwo} from './src/CompTwo';
+export { default as Picker } from './src/Picker';
+export { default as AutoSuggest } from './src/AutoSuggest';
+export { default as NumericInput } from './src/NumericInput';

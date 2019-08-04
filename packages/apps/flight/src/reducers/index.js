@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import { reducer as reduxFormReducer } from 'redux-form';
-import flightReducer from './reducer.flight';
+import searchReducer from './reducer.search';
 
 const rootReducer = combineReducers({
-  form: reduxFormReducer,
-  flight: flightReducer
+  search: searchReducer
 });
 
 export default rootReducer;
