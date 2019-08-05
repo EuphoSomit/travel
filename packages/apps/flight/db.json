@@ -1,24 +1,33 @@
 {
-    "airport": [
-        {
-            "city": "Pune",
-            "country": "India, Maharashtra",
-            "code": "PNQ"
-        },
-        {
-            "city": "Delhi - Indira Gandhi International Airport",
-            "country": "India",
-            "code": "DEL"
-        }
-    ],
-    "comments": [
-        {
-            "id": 1,
-            "body": "some comment",
-            "postId": 1
-        }
-    ],
-    "profile": {
-        "name": "typicode"
+  "cities": ["Pune", "Delhi"],
+  "flights": [
+    {
+      "from": {
+        "short": "PNQ",
+        "full": "Pune"
+      },
+      "to": {
+        "short": "DEL",
+        "full": "Delhi - Indira Gandhi International Airport"
+      },
+      "code": "TY-4211",
+      "departure": "Mon Aug 12 2019 12:40:20 GMT+0300 (IST)",
+      "arrival": "Mon Aug 12 2019 13:50:20 GMT+0300 (IST)",
+      "price": 120
+    },
+    {
+      "from": {
+        "short": "DEL",
+        "full": "Delhi - Indira Gandhi International Airport"
+      },
+      "to": {
+        "short": "PNQ",
+        "full": "Pune"
+      },
+      "code": "TY-4211",
+      "departure": "Tue Aug 15 2019 12:40:20 GMT+0300 (IST)",
+      "arrival": "Tue Aug 15 2019 13:50:20 GMT+0300 (IST)",
+      "price": 120
     }
+  ]
 }

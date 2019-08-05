@@ -1,8 +1,13 @@
-import { combineReducers } from 'redux';
-import searchReducer from './reducer.search';
+import {combineReducers} from 'redux';
+
+import flights from './flights';
+import cities from './cities';
+import filters from './filters';
 
 const rootReducer = combineReducers({
-  search: searchReducer
+	flights: flights,
+	cities: cities,
+	filters: filters
 });
 
 export default rootReducer;
