@@ -7,43 +7,43 @@ import {
   UPDATE_PASSENGERS,
   UPDATE_PRICE_LOW,
   UPDATE_PRICE_HIGH
-} from '../actions';
+} from '../constants/constant.action';
 
 const now = new Date();
 export default function filters(state = {
-    from: 'Istanbul',
-    to:   'Antalya',
-    departDate: new Date(now.getFullYear(), now.getMonth(), now.getDate()+1),
-    returnDate: new Date(now.getFullYear(), now.getMonth(), now.getDate()+1),
-    roundTrip: true,
-    passengers: 1
-  }, action) {
+  from: 'Pune',
+  to: 'Delhi',
+  departDate: new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1),
+  returnDate: new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1),
+  roundTrip: true,
+  passengers: 1
+}, action) {
 
-  switch(action.type) {
+  switch (action.type) {
     case UPDATE_ROUND_TRIP:
       return Object.assign({}, state, {
-          roundTrip: action.roundTrip
-        });
+        roundTrip: action.roundTrip
+      });
     case UPDATE_FROM:
       return Object.assign({}, state, {
-          from: action.from
-        });
+        from: action.from
+      });
     case UPDATE_TO:
       return Object.assign({}, state, {
-          to: action.to
-        });
+        to: action.to
+      });
     case UPDATE_DEPART_DATE:
       return Object.assign({}, state, {
-          departDate: action.departDate
-        });
+        departDate: action.departDate
+      });
     case UPDATE_RETURN_DATE:
       return Object.assign({}, state, {
-          returnDate: action.returnDate
-        });
+        returnDate: action.returnDate
+      });
     case UPDATE_PASSENGERS:
       return Object.assign({}, state, {
-          passengers: action.passengers
-        });
+        passengers: action.passengers
+      });
     case UPDATE_PRICE_LOW:
       return Object.assign({}, state, {
         priceLow: action.priceLow

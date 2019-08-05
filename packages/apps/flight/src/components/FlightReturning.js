@@ -1,5 +1,5 @@
 import React from 'react';
-import FlightIcon from 'react-icons/lib/md/flight';
+import { MdFlight } from 'react-icons/md';
 import Card from './Card';
 import FlightDetails from './FlightDetails';
 import Button from './Button';
@@ -10,16 +10,16 @@ import Button from './Button';
  * @return {Component}
  */
 export default (props) => {
-    return (
-      <Card className="flight return">
-        <FlightDetails {...props.out} />
-        <FlightDetails {...props.return} />
-        <div className="price">
-          <span>£{(props.out.price + props.return.price) * (props.passengers ||  1)}</span>
-        </div>
-        <div className="actions">
-          <Button success={true}><FlightIcon /> Select this flight</Button>
-        </div>
-      </Card>
-    );
+  return (
+    <Card className="flight return">
+      <FlightDetails {...props.out} />
+      <FlightDetails {...props.return} />
+      <div className="price">
+        <span>£{(props.out.price + props.return.price) * (props.passengers || 1)}</span>
+      </div>
+      <div className="actions">
+        <Button success={true}><MdFlight /> Select this flight</Button>
+      </div>
+    </Card>
+  );
 }

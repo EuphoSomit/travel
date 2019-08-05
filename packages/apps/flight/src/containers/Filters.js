@@ -20,48 +20,44 @@ import Filters from '../components/Filters';
 export class FiltersContainer extends Component {
 
   static propTypes = {
-    dispatch: PropTypes.func.isRequired,
     from: PropTypes.string.isRequired,
     to: PropTypes.string.isRequired,
     roundTrip: PropTypes.bool.isRequired,
     departDate: PropTypes.instanceOf(Date).isRequired,
     returnDate: PropTypes.instanceOf(Date).isRequired,
-    passengers:  PropTypes.number.isRequired,
-    cities:  PropTypes.array.isRequired,
-    priceLow:  PropTypes.number,
-    priceHigh:  PropTypes.number,
+    passengers: PropTypes.number.isRequired,
+    cities: PropTypes.array.isRequired,
+    priceLow: PropTypes.number,
+    priceHigh: PropTypes.number,
   }
 
   componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch(fetchCities());
+    this.props.fetchCities();
   }
 
   handleSearch() {
-    const { dispatch } = this.props;
-    dispatch(searchFlights());
+    this.props.searchFlights(this.props.filters);
   }
 
   handleChange(prop, val) {
     console.debug(`${prop} changed to: ${val}`);
-    const { dispatch } = this.props;
-    switch(prop) {
+    switch (prop) {
       case 'from':
-        return dispatch(updateFrom(val));
+        return this.props.updateFrom(val);
       case 'to':
-        return dispatch(updateTo(val));
+        return this.props.updateTo(val);
       case 'roundTrip':
-        return dispatch(updateRoundTrip(val));
+        return this.props.updateRoundTrip(val);
       case 'departDate':
-        return dispatch(updateDepartDate(val));
+        return this.props.updateDepartDate(val);
       case 'returnDate':
-        return dispatch(updateReturnDate(val));
+        return this.props.updateReturnDate(val);
       case 'passengers':
-        return dispatch(updatePassengers(val));
+        return this.props.updatePassengers(val);
       case 'priceLow':
-        return dispatch(updatePriceLow(val));
+        return this.props.updatePriceLow(val);
       case 'priceHigh':
-        return dispatch(updatePriceHigh(val));
+        return this.props.updatePriceHigh(val);
       default:
         return
     }
@@ -71,7 +67,7 @@ export class FiltersContainer extends Component {
     return (
       <Filters {...this.props}
         onSearch={this.handleSearch.bind(this)}
-        onChange={this.handleChange.bind(this)}/>
+        onChange={this.handleChange.bind(this)} />
     )
   }
 }
@@ -101,8 +97,22 @@ function mapStateToProps(state) {
     passengers,
     cities,
     priceHigh,
-    priceLow
+    priceLow,
+    filters: state.filters
   };
 }
 
-export default connect(mapStateToProps)(FiltersContainer);
+const mapDispatchToProps = (dispatch) => ({
+  fetchCities: () => dispatch(fetchCities()),
+  searchFlights: (filters) => dispatch(searchFlights(filters)),
+  updateFrom: (val) => dispatch(updateFrom(val)),
+  updateTo: (val) => dispatch(updateTo(val)),
+  updateRoundTrip: (val) => dispatch(updateRoundTrip(val)),
+  updateDepartDate: (val) => dispatch(updateDepartDate(val)),
+  updateReturnDate: (val) => dispatch(updateReturnDate(val)),
+  updatePassengers: (val) => dispatch(updatePassengers(val)),
+  updatePriceLow: (val) => dispatch(updatePriceLow(val)),
+  updatePriceHigh: (val) => dispatch(updatePriceHigh(val))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(FiltersContainer);

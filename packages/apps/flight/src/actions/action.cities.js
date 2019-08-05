@@ -1,13 +1,7 @@
-import {FETCH_CITIES, REQUEST_CITIES} from '../constants/constant.action';
-import * as api from '../api';
+import { REQUEST_CITIES } from '../constants/constant.action';
 
 export function fetchCities() {
-	return async (dispatch, getState) => {
-		dispatch({type: REQUEST_CITIES});
-		const results = await api.getCities();
-		return dispatch({
-			type: FETCH_CITIES,
-			cities: results
-		});
-	};
+	return {
+		type: REQUEST_CITIES
+	}
 }

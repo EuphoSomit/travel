@@ -1,9 +1,9 @@
 import React from 'react'
-import RefreshIcon from 'react-icons/lib/md/refresh'
+import { MdRefresh } from 'react-icons/md'
 
 export default () => (
   <div className="loading">
-    <RefreshIcon className="icon" />
+    <MdRefresh className="icon" />
     <p>Loading</p>
   </div>
 )

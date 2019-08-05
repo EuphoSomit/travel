@@ -1,23 +1,14 @@
 import React, { Suspense, lazy } from 'react';
-import { Route, Redirect, Switch } from 'react-router-dom';
-import Header from './components/header';
-import Footer from './components/footer';
+import { Route, Switch } from 'react-router-dom';
 
-const SearchContainer = lazy(() => import('./containers/search'));
+const SearchContainer = lazy(() => import('./containers/Search'));
 
 const routes = (
-  <>
-    <Header />
-    <div className="container main">
-      <Suspense fallback={<div />}>
-        <Switch>
-          <Route path="/search" component={SearchContainer} />
-          <Redirect from="/" to="/search" />
-        </Switch>
-      </Suspense>
-    </div>
-    <Footer />
-  </>
+  <Suspense fallback={<div />}>
+    <Switch>
+      <Route exact path="/" component={SearchContainer} />
+    </Switch>
+  </Suspense>
 );
 
 export default routes;

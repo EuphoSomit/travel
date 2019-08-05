@@ -47,7 +47,7 @@ export function updateReturnDate(opt) {
 export function updatePassengers(opt) {
 	return {
 		type: UPDATE_PASSENGERS,
-		passengers: Number(opt) * 1
+		passengers: opt * 1
 	};
 }
 

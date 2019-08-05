@@ -1,6 +1,6 @@
 import axios from 'axios';
-import {validCodes} from '../constants';
-import {token} from '../services';
+import { validCodes } from '../constants';
+import { token } from '../services';
 export const baseService = {
 	get,
 	put,
@@ -12,7 +12,7 @@ export const baseService = {
 // Get Call
 function get(url, header) {
 	return axios
-		.get(url, {headers: {'Access-Control-Allow-Origin': '*'}})
+		.get(url, { headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' } })
 		.then(handleResponse)
 		.catch(error);
 }
@@ -20,7 +20,7 @@ function get(url, header) {
 // Create Call
 function put(url, header, body) {
 	return axios
-		.put(url, body, {headers: {Authorization: header.Authorization}})
+		.put(url, body, { headers: { Authorization: header.Authorization } })
 		.then(handleResponse)
 		.catch(error);
 }
@@ -41,7 +41,7 @@ function post(url, body, header) {
 // Delete Call (prefixed function name with underscore because delete is a reserved word in javascript)
 function _delete(url, header, params) {
 	return axios
-		.delete(url, {headers: {Authorization: header.Authorization}})
+		.delete(url, { headers: { Authorization: header.Authorization } })
 		.then(handleResponse)
 		.catch(error);
 }

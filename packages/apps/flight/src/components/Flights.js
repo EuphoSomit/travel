@@ -23,8 +23,8 @@ function isInPriceRange(price, low, high) {
  * @return {various}              Array of React components or singular component.
  */
 function renderFlight(outFlight, returnFlights, passengers, priceLow, priceHigh) {
-  if(returnFlights)
-     return returnFlights.filter(returnFlight => isInPriceRange(outFlight.price + returnFlight.price, priceLow, priceHigh))
+  if (returnFlights)
+    return returnFlights.filter(returnFlight => isInPriceRange(outFlight.price + returnFlight.price, priceLow, priceHigh))
       .map(returnFlight => (<ReturningFlight out={outFlight} return={returnFlight} passengers={passengers} />));
   else if (isInPriceRange(outFlight.price, priceLow, priceHigh))
     return <Flight {...outFlight} passengers={passengers} />;
@@ -41,7 +41,7 @@ export default (props) => {
   return (
     <div className="flights">
       <Header>Available Flights</Header>
-      {isFetching ? <Loading /> : outFlights && outFlights.map(flight => renderFlight(flight, returnFlights, passengers, priceLow, priceHigh)) }
+      {isFetching ? <Loading /> : outFlights && outFlights.map(flight => renderFlight(flight, returnFlights, passengers, priceLow, priceHigh))}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import {
   SEARCH_FLIGHTS,
   REQUEST_FLIGHTS_SEARCH,
-} from '../actions';
+} from '../constants/constant.action';
 
 export default function flights(state = {
     outFlights: [],

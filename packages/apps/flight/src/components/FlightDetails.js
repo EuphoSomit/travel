@@ -1,8 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import ArrowIcon from 'react-icons/lib/md/arrow-forward';
-import TakeOffIcon from 'react-icons/lib/md/flight-takeoff';
-import LandIcon from 'react-icons/lib/md/flight-land';
+import { MdArrowForward, MdFlightTakeoff, MdFlightLand } from 'react-icons/md';
 
 /**
  * Flight details component. Renders flight code, route, time etc.
@@ -17,12 +15,12 @@ export default (props) => {
     <div className="flight-details">
       <div className="code">{props.code}</div>
       <div className="route">
-        {props.from.short} <ArrowIcon/> {props.to.short}
+        {props.from.short} <MdArrowForward /> {props.to.short}
       </div>
       <div className="times">
-        <TakeOffIcon/> {departure.format('LT')}
-        <br/>
-        <LandIcon/> {arrival.format('LT')}
+        <MdFlightTakeoff /> {departure.format('LT')}
+        <br />
+        <MdFlightLand /> {arrival.format('LT')}
       </div>
     </div>
   )

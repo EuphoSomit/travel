@@ -2,7 +2,7 @@
   "name": "travel",
   "private": true,
   "scripts": {
-    "start:flight": "cd ./packages/apps/flight && yarn start",
+    "start:flight": "cd ./packages/apps/flight && yarn start:dev",
     "start:server": "cd ./packages/apps/flight && yarn server:json",
     "test": "FORCE_COLOR=true lerna run lint && CI=true FORCE_COLOR=true lerna run test -- --coverage",
     "deploy": "FORCE_COLOR=true lerna run deploy"
