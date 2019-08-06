@@ -4,6 +4,12 @@
 
 - Yarn 1.13.0
 - Node 11.14.0
+- react
+- redux
+- redux-saga
+- lerna
+- create-react-app
+
 
 
 ### To Run
