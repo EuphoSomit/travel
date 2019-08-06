@@ -33,14 +33,14 @@ export function updateTo(opt) {
 export function updateDepartDate(opt) {
 	return {
 		type: UPDATE_DEPART_DATE,
-		departDate: new Date(opt + 'T00:00:00')
+		departDate: new Date(opt)
 	};
 }
 
 export function updateReturnDate(opt) {
 	return {
 		type: UPDATE_RETURN_DATE,
-		returnDate: new Date(opt + 'T00:00:00')
+		returnDate: new Date(opt)
 	};
 }
 
