@@ -10,3 +10,6 @@
 - yarn install
 - yarn start:flight
 - yarn start:server
+
+
+Selected Date will be 8 Aug 2019 and/or for returning 9 Aug 2019
